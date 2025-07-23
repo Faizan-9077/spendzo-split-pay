@@ -109,7 +109,6 @@ export default function Home() {
                   <div className="flex items-center space-x-3">
                     <Avatar>
                       {/* Placeholder avatar */}
-                      <AvatarImage src={image} alt={name} />
                       <AvatarFallback className="uppercase">
                         {name.charAt(0)}
                       </AvatarFallback>

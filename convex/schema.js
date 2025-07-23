@@ -52,13 +52,13 @@ export default defineSchema({
       note: v.optional(v.string()),
       date: v.number(),
       paidByUserId: v.id("users"),
-      receiveByUserId: v.id("users"),
+      receivedByUserId: v.id("users"),
       groupId: v.optional(v.id("groups")),
       relatedExpenseIds: v.optional(v.array(v.id("expenses"))),
       createdBy: v.id("users"),
     })
     .index("by_group", ["groupId"])
     .index("by_user_and_group", ["paidByUserId", "groupId"])
-    .index("by_receiver_and_group", ["receiveByUserId", "groupId"])
+    .index("by_receiver_and_group", ["receivedByUserId", "groupId"])
     .index("by_date", ["date"]),
 });
